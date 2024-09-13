@@ -5,7 +5,7 @@ cd(working_dir);
 opts = weboptions("HeaderFields",{'Accept' 'application/json'});
 
 % Save as JSON
-% websave('dspace_collection_rest.xml','https://macsphere.mcmaster.ca/rest/collections?offset=0&limit=5000',opts);
+websave('dspace_collection_rest.json','https://macsphere.mcmaster.ca/rest/collections?offset=0&limit=5000',opts);
 
 % Read JSON file from DSpace API to variable data
 data = webread('https://macsphere.mcmaster.ca/rest/collections?offset=0&limit=5000',opts);
